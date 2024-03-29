@@ -14,16 +14,16 @@ pipeline{
                 }
             }
         }
-        // stage('UNIT testing'){
+        stage('UNIT testing'){
             
-        //     steps{
+            steps{
                 
-        //         script{
+                script{
                     
-        //             sh 'mvn test'
-        //         }
-        //     }
-        // }
+                    sh 'mvn test'
+                }
+            }
+        }
         // stage('Integration testing'){
             
         //     steps{
