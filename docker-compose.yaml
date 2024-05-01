@@ -63,3 +63,4 @@ volumes:
 
 networks:
   cicd_network:
+    external: true
