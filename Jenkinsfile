@@ -63,16 +63,16 @@ pipeline{
                     
                 }
             }
-            // stage('Quality Gate Status'){
+            stage('Quality Gate Status'){
                 
-            //     steps{
+                steps{
                     
-            //         script{
+                    script{
                         
-            //             waitForQualityGate abortPipeline: false, credentialsId: 'sonar-api-key'
-            //         }
-            //     }
-            // }
+                        waitForQualityGate abortPipeline: false, credentialsId: 'sonar-api-key'
+                    }
+                }
+            }
         }
         
 }
