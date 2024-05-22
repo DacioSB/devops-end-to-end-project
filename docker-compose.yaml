@@ -43,7 +43,7 @@ services:
     networks:
       - cicd_network
   nexus:
-    image: sonatype/nexus3:latest
+    image: sonatype/nexus3:3.64.0
     container_name: nexus
     ports:
       - "8081:8081"
