@@ -83,6 +83,14 @@ pipeline{
                     }
                 }
             }
+            stage('Docker image build') {
+
+                steps { 
+                    script {
+                        sh 'docker build -t dockersb/demo:${BUILD_NUMBER} .'
+                    }
+                }
+            }
         }
         
 }
