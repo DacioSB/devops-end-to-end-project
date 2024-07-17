@@ -93,6 +93,18 @@ pipeline{
                     }
                 }
             }
+            stage('Docker image push') {
+
+                steps { 
+                    script {
+                        withCredentials([string(credentialsId: 'docker-hub-pwd', variable: 'dockerHubPwd')]) {
+                            sh 'docker login -u 12020221 -p ${dockerHubPwd}'
+                            sh 'docker push 12020221/${JOB_NAME}:v1.${BUILD_ID}'
+                            sh 'docker push 12020221/${JOB_NAME}:latest'
+                        }
+                    }
+                }
+            }
         }
         
 }
